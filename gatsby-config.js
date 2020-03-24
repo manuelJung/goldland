@@ -1,8 +1,11 @@
+require('source-map-support').install();
+require('ts-node').register()
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Goldland Website`,
+    description: `Todo`,
+    author: `Manuel Jung`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
