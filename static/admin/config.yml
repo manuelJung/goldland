@@ -23,6 +23,9 @@ collections:
             name: title
             widget: string
             hint: "SEO: title displayed inn browser tab"
+          - label: "Test"
+            name: test
+            widget: String
 
 
       
