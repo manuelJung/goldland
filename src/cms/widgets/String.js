@@ -2,13 +2,12 @@ import * as React from 'react'
 import styled from 'styled-components'
 import createWidget from './utils/createWidget'
 
-// type Value = {
-//   de: string
-// }
-
 // type Props = {
-//   value?: Value,
-//   onChange: (value:Value) => void
+//   value?: string,
+//   onChange: (value:string) => void
+//   options: {
+//     placeholder: string
+//   }
 // }
 
 export default createWidget(function String (props) {
@@ -17,7 +16,7 @@ export default createWidget(function String (props) {
     <Wrapper>
       <input 
         value={props.value} 
-        placeholder='foo' 
+        placeholder={props.options.placeholder}
         onChange={e => props.onChange(e.target.value)}
         onFocus={props.setActiveStyle}
         onBlur={props.setInactiveStyle}
