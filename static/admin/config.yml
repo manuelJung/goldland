@@ -25,6 +25,8 @@ collections:
             hint: "SEO: title displayed inn browser tab"
           - label: "Test"
             name: test
+            options:
+              placeholder: my-placeholder
             widget: String
 
 

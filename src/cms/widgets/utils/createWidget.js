@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 
 export default (Component, defaultValue) => function Layout(props) {
-  const [locale, setLocale] = React.useState('de')
+  const [locale, setLocale] = React.useState('en')
   const btProps = newLocale => ({
     onClick: () => setLocale(newLocale),
     active: newLocale === locale
@@ -19,15 +19,20 @@ export default (Component, defaultValue) => function Layout(props) {
       [locale]: newVal
     })
   }
+  const optionsIm = props.field.get('options')
+  const options = optionsIm ? optionsIm.toJS() : {}
   return (
     <Wrapper active={props.hasActiveStyle}>
       <div className='selection'>
-        <Button {...btProps('de')}>de</Button>
         <Button {...btProps('en')}>en</Button>
+        <Button {...btProps('de')}>de</Button>
         <Button {...btProps('mk')}>mk</Button>
         <Button {...btProps('al')}>al</Button>
       </div>
-      <Component {...props} value={value} onChange={handleChange}/>
+      <Component 
+        value={value} 
+        onChange={handleChange} 
+        options={options}/>
     </Wrapper>
   )
 }
@@ -39,7 +44,7 @@ const Wrapper = styled.div`
 
   > .selection {
     position: absolute;
-    top: -22px;
+    top: -24px;
     right: -2px;
   }
 `
