@@ -30,6 +30,8 @@ export default (Component, defaultValue) => function Layout(props) {
         <Button {...btProps('al')}>al</Button>
       </div>
       <Component 
+        setActiveStyle={props.setActiveStyle}
+        setInactiveStyle={props.setInactiveStyle}
         value={value} 
         onChange={handleChange} 
         options={options}/>

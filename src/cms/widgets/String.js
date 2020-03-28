@@ -7,7 +7,9 @@ import createWidget from './utils/createWidget'
 //   onChange: (value:string) => void
 //   options: {
 //     placeholder: string
-//   }
+//   },
+//   setActiveStyle: Function,
+//   setInactiveStyle: Function
 // }
 
 export default createWidget(function String (props) {
