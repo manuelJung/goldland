@@ -15,6 +15,7 @@ export default (Component, defaultValue) => function Layout(props) {
   const value = props.value ? props.value[locale] || defaultValue : defaultValue
   const handleChange = newVal => {
     props.onChange({
+      __localized: true,
       ...props.value,
       [locale]: newVal
     })
