@@ -28,7 +28,7 @@ export default function TeaserImage ({children}) {
 }
 
 const Wrapper = styled.div`
-  height: calc(100vh - ${HEADER_HEIGHT});
+  height: calc(100vh - ${HEADER_HEIGHT}px);
   background: rgba(0,0,0,0.4);
 
   > .ParallaxBackground {
