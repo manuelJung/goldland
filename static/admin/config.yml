@@ -10,7 +10,7 @@ collections:
     label: Pages
     delete: false
     files:
-      - file: "src/cms/templates/homepage.json"
+      - file: "src/cms/templates/pages/homepage.json"
         name: homepage
         label: Homepage
         format: json
