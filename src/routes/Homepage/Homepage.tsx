@@ -3,16 +3,24 @@ import styled from 'styled-components'
 import TeaserImage from './TeaserImage'
 import Layout from 'containers/Layout'
 import {AiOutlineArrowDown} from 'react-icons/ai'
+import {scroller} from 'react-scroll'
 
 export default function Homepage () {
+  const scrollDown = () => scroller.scrollTo('scroll-target', {
+    smooth: true,
+    duration: 600
+  })
   return (
     <Layout as={Wrapper}>
       <TeaserImage as={Teaser}>
         <h1>Everything starts <br/>from the land</h1>
-        <div className='scroll-down'>
+        <div className='scroll-down' onClick={scrollDown}>
           <AiOutlineArrowDown/>
         </div>
       </TeaserImage>
+
+      <div className='scroll-target'/>
+
     </Layout>
   )
 }
