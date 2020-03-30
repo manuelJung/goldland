@@ -44,7 +44,10 @@ export default function ParallaxBackground ({fluid, weight=150, children}:Props)
           bottom: -weight,
           height: `calc(100% + ${weight*2}px)`
       }}/>
-      {children}
+      <div className='overlay'/>
+      <div className='content'>
+        {children}
+      </div>
     </Wrapper>
   )
 }
@@ -55,15 +58,28 @@ const Wrapper = styled.div`
   height: 100%;
 
   > .img {
-    background-color: lightgrey;
     position: absolute;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1;
 
     > div {
       width: 100%;
       height: 100%;
     }
+  }
+
+  > .overlay {
+    z-index: 2;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  > .content {
+    z-index: 3;
   }
 `

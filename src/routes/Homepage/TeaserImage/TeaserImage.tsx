@@ -16,7 +16,7 @@ export default function TeaserImage ({children, as}:Props) {
     query {
       teaser: file(relativePath: { eq: "cornfield.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
+          fluid(maxWidth: 1600, fit: FILL, cropFocus: CENTER, toFormat: WEBP) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -38,7 +38,6 @@ const Content = styled.div``
 
 const Wrapper = styled.div`
   height: calc(100vh - ${HEADER_HEIGHT}px);
-  background: rgba(0,0,0,0.4);
 
   > .ParallaxBackground {
     display: flex;

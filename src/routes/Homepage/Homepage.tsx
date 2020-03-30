@@ -22,8 +22,9 @@ const Teaser = styled.div`
   text-align: center;
   > h1 {
     font-family: Cinzel;
-    font-size: 50px;
+    font-size: 40px;
     text-transform: uppercase;
+    line-height: 60px;
   }
 
   > p {
