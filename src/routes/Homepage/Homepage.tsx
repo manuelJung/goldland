@@ -8,21 +8,25 @@ export default function Homepage () {
     <Layout as={Wrapper}>
       <TeaserImage as={Teaser}>
         <h1>Goldland</h1>
-        <p>Everything starts from the land</p>
+        <p>"Everything starts from the land"</p>
       </TeaserImage>
     </Layout>
   )
 }
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  margin-bottom: 100vh;
+`
 
 const Teaser = styled.div`
   text-align: center;
   > h1 {
     font-family: Cinzel;
+    font-size: 60px;
   }
 
   > p {
     font-family: Dosis;
+    font-size: 24px;
   }
 `
