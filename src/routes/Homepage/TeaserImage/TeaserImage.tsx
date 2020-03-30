@@ -25,7 +25,7 @@ export default function TeaserImage ({children, as}:Props) {
   `)
   return (
     <Wrapper className='TeaserImage'>
-      <ParallaxBackground fluid={teaser.childImageSharp.fluid} >
+      <ParallaxBackground weight={350} fluid={teaser.childImageSharp.fluid} >
         <Content as={as}>
           {children}
         </Content>

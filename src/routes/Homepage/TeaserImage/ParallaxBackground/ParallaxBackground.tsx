@@ -10,8 +10,7 @@ type Props = {
   children?: any
 }
 
-export default function ParallaxBackground ({fluid, weight, children}:Props) {
-  weight = weight || 150
+export default function ParallaxBackground ({fluid, weight=150, children}:Props) {
   const [ref, inView] = useInView()
   const image = React.useRef<any>()
   const lastOffset = React.useRef(0)
