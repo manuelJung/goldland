@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Header from './Header'
+import GlobalStyle from './GlobalStyle'
 
 type Props = {
   children: any,
@@ -10,6 +11,7 @@ type Props = {
 export default function Layout (props:Props) {
   return (
     <Wrapper>
+      <GlobalStyle/>
       <Header/>
       <Content as={props.as}>
         {props.children}
