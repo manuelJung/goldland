@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import Header from './Header'
 
 type Props = {
   children: any,
@@ -9,7 +10,7 @@ type Props = {
 export default function Layout (props:Props) {
   return (
     <Wrapper>
-      <div className='header'></div>
+      <Header/>
       <Content as={props.as}>
         {props.children}
       </Content>
