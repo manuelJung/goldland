@@ -22,6 +22,6 @@ const Content = styled.div``
 const Wrapper = styled.div`
   .header {
     height: 60px;
-    background: #795548;
+    background: rgb(55,55,55);
   }
 `

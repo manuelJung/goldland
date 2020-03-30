@@ -6,10 +6,15 @@ import styled from 'styled-components'
 
 const HEADER_HEIGHT = 60
 
-export default function TeaserImage ({children}) {
+type Props = {
+  children: any,
+  as: any
+}
+
+export default function TeaserImage ({children, as}:Props) {
   const {teaser} = useStaticQuery(graphql`
     query {
-      teaser: file(relativePath: { eq: "teaser.jpg" }) {
+      teaser: file(relativePath: { eq: "cornfield.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -21,11 +26,15 @@ export default function TeaserImage ({children}) {
   return (
     <Wrapper className='TeaserImage'>
       <ParallaxBackground fluid={teaser.childImageSharp.fluid} >
-        {children}
+        <Content as={as}>
+          {children}
+        </Content>
       </ParallaxBackground>
     </Wrapper>
   )
 }
+
+const Content = styled.div``
 
 const Wrapper = styled.div`
   height: calc(100vh - ${HEADER_HEIGHT}px);
