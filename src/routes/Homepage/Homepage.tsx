@@ -25,9 +25,14 @@ const Teaser = styled.div`
   text-align: center;
   > h1 {
     font-family: Cinzel;
-    font-size: 40px;
+    font-size: 30px;
     text-transform: uppercase;
-    line-height: 60px;
+    line-height: 40px;
+    padding: 15px;
+    @media (min-width:800px){
+      font-size: 50px;
+      line-height: 60px;
+    }
   }
 
   > .scroll-down {
